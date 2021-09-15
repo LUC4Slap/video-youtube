@@ -20,9 +20,21 @@
 }
 
 .btnDownload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  margin: 0 auto;
   text-decoration: none;
   padding: 10px;
   background-color: tomato;
   color: white;
   border-radius: 5px;
+  transition: 0.6s ease-in-out;
+}
+
+.btnDownload:hover {
+  padding: 15px;
+  transition: 0.6s ease-in-out;
 }
