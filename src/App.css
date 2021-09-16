@@ -1,5 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  background-color: #252525;
+  height: 100vh;
+  color: #fff;
+  height: 100vh;
+}
+
+.pesquisa {
+  padding-top: 20px;
+}
+
+.inputPesquisa {
+  margin-top: 10px;
 }
 
 .inputLink {
@@ -7,6 +25,10 @@
   padding: 10px;
   border-radius: 5px;
   border-color: tomato;
+}
+
+.inputLink:focus {
+  outline: none;
 }
 
 .btnBaixar {
@@ -37,4 +59,18 @@
 .btnDownload:hover {
   padding: 15px;
   transition: 0.6s ease-in-out;
+}
+
+.cardMusic {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid tomato;
+  width: 80%;
+  padding: 15px;
+  margin: 30px auto;
+  border-radius: 5px;
+}
+
+.cardMusic a {
+  margin: 15px auto;
 }

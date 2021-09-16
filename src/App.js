@@ -16,9 +16,10 @@ function App() {
       params: { id: idVideo },
       headers: {
         "x-rapidapi-host": "youtube-mp36.p.rapidapi.com",
-        "x-rapidapi-key": "7ef0023ea0mshe5462d94f5d7854p188505jsn9267404dc9cd",
+        "x-rapidapi-key": process.env.REACT_APP_TOKEN_API,
       },
     };
+    
     let rep = await axios.request(options);
     setStatus(rep.data.status);
     setUrlVideo(rep.data.link);
@@ -28,10 +29,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>
+      <div className="pesquisa">
+         <h1 className="titulo">
         Baixar Musica do <b>YouTube</b>
       </h1>
-      <input
+      <div className="inputPesquisa">
+        <input
         className="inputLink"
         type="text"
         onChange={(t) => setLink(t.target.value)}
@@ -41,8 +44,12 @@ function App() {
       <button className="btnBaixar" onClick={() => getAudio()}>
         Procurar
       </button>
+      </div>
+      
+      </div>
+     
       {status === "ok" ? (
-        <div>
+        <div className="cardMusic">
           <h1>{nameVideo}</h1>
           <a href={urlVideo} className="btnDownload" download>
             Baixar
